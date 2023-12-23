@@ -1,8 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { get } from 'http';
-import { Db,MongoClient } from 'mongodb';
 
 const app = express()
 const port = 4000

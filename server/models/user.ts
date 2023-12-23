@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 import validator from "validator";
+import { invitationSchema } from "./invitation";
+import { requestSchema } from "./request";
 
 const userSchema=new mongoose.Schema({
     username:{
@@ -33,18 +35,43 @@ const userSchema=new mongoose.Schema({
         }
     },
     favorite_animes:{
-        // not yet 
+        type:[
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"Anime"
+            }
+        ],
+        default:[]
     },
     toWatchList:{
-        // not yet
+        type:[
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"Anime"
+            }
+        ],
+        default:[]
     },
     chatRooms:{
-        // not yet 
+        type:[
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"ChatRoom"
+            }
+        ],
+        default:[],
     },
     pending_invitations:{
-        // not yet 
+        type:[invitationSchema],
+        default:[]
     },
     pending_requests:{
-        // not yet 
+        type:[requestSchema],
+        default:[], 
     }
-})
+});
+
+const User=mongoose.model("user",userSchema);
+
+export default User;
+
