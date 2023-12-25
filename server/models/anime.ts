@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import { commentSchema } from "./comment";
+import { ratingSchema } from "./rating";
 
 const animeSchema=new mongoose.Schema({
     title: { type: String, required: true },
@@ -10,12 +12,16 @@ const animeSchema=new mongoose.Schema({
         type: Number,
     },
     comments:{
-        // not yet 
+        type:[commentSchema],
+        default:[]
     },
     rating:{
-        // not yet
+        type:[ratingSchema],
+        default:[]
     },
     score:Number, // [animeList score + anime-hub score ]/2
+});
 
-  
-})
+const Anime=mongoose.model("anime",animeSchema);
+
+export default Anime;
