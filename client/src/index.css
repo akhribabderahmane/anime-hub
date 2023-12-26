@@ -1,68 +1,50 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+*,html,body{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@layer base{
+    .first-gradient{
+        @apply bg-gradient-to-tr from-stem-green-600 from-5% via-heisenberg-blue-600 via-65% to-day-blue-600 to-95% ;
+    }
+    .second-gradient{
+        @apply bg-gradient-to-bl from-stem-green-600 from-5% via-heisenberg-blue-600 via-65% to-day-blue-600 to-95% ;
+    }
+    .third-gradient{
+        @apply bg-gradient-to-tr from-stem-green-500 from-5% via-heisenberg-blue-500 via-65% to-day-blue-500 to-95% ;
+    }
+    .fourth-gradient{
+        @apply bg-gradient-to-bl from-stem-green-500 from-5% via-heisenberg-blue-500 via-65% to-day-blue-500 to-95% ;
+    }
+    .fifth-gradient{
+        @apply bg-gradient-to-bl from-stem-green-500 from-5% to-heisenberg-blue-500 to-65% ;
+    }
+    .sixth-gradient{
+        @apply bg-gradient-to-tr from-stem-green-500 from-5% to-heisenberg-blue-500 to-65% ;
+    }
+    .text-gradient1{
+        @apply  bg-clip-text text-transparent bg-gradient-to-tr from-stem-green-600 from-0% via-heisenberg-blue-600 via-45% to-day-blue-600 to-80%   ;
+    }
+    .text-gradient2{
+        @apply  bg-clip-text text-transparent bg-gradient-to-bl from-stem-green-600 from-30% via-heisenberg-blue-600 via-70% to-day-blue-600 to-95%    ;
+    }
+    .text-gradient3{
+        @apply  bg-clip-text text-transparent bg-gradient-to-tr from-stem-green-500 from-0% via-heisenberg-blue-500 via-45% to-day-blue-500 to-80%   ;
+    }
+    .text-gradient4{
+        @apply  bg-clip-text text-transparent bg-gradient-to-bl from-stem-green-500 from-40% via-heisenberg-blue-500 via-80% to-day-blue-500 to-100% ;
+    }
+    .text-gradient5{
+        @apply  bg-clip-text text-transparent bg-gradient-to-bl from-stem-green-500 from-45% to-heisenberg-blue-500 to-85% ;
+    }
+    .text-gradient6{
+        @apply  bg-clip-text text-transparent bg-gradient-to-bl  to-heisenberg-blue-500 from-35% from-stem-green-500 to-85%  ;
+    }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
