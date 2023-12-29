@@ -11,11 +11,14 @@ const SignIn = () => {
 
           <div className=" w-full flex flex-col items-center ">
             <div>
-            <h1 className=" text-4xl  ">Let's get <span className=" font-bold text-gradient2">creative!</span></h1>
-            <p className=" text-noble-black-300">Log in to Artificium to start creating magic.</p>
+            <h1 className=" mb-4">Let's Enjoy <span className=" font-bold text-gradient2">Anime !</span></h1>
+            <p className=" text-noble-black-300 text-lg">Log in to Artificium to start creating magic.</p>
+            </div>
+
+            <div className=" flex flex-col gap-2">
             </div>
           </div>
-
+           
           <div className="flex flex-row gap-1 text-sm">
             <p className=" text-noble-black-400 ">don't have an account ?</p>
             <button className=" font-bold text-gradient6">
@@ -24,7 +27,7 @@ const SignIn = () => {
           </div>
           </div>
       </section>
-      <section className="right-section w-1/2">
+      <section className="right-section rounded-xl w-1/2">
       </section>
     </div>
   );

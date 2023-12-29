@@ -46,5 +46,23 @@
     .text-gradient6{
         @apply  bg-clip-text text-transparent bg-gradient-to-bl  to-heisenberg-blue-500 from-35% from-stem-green-500 to-85%  ;
     }
+    h1{
+        @apply text-4xl leading-8 ;
+    }
+    h2{
+        @apply text-3xl leading-7 ;
+    }
+    h3{
+        @apply text-2xl leading-6 ;
+    }
+    h4{
+        @apply text-xl leading-5 ;
+    }
+    h5{
+        @apply text-lg leading-4 ;
+    }
+    h6{
+        @apply text-base leading-3 ;
+    }
 }
 
